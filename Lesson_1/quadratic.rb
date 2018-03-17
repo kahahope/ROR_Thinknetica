@@ -1,9 +1,9 @@
 puts "Укажите значение a"
-a = gets.chomp.to_f
+a = gets.to_f
 puts "Укажите значение b"
-b = gets.chomp.to_f
+b = gets.to_f
 puts "Укажите значение c"
-c = gets.chomp.to_f
+c = gets.to_f
 
 d = b**2 - 4 * a * c
 
