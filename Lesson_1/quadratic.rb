@@ -12,8 +12,8 @@ if d == 0
   puts "Уравнение имеет один корень, который равен #{x}"
 elsif d > 0
   root = Math.sqrt(d)
-  x1 = (-b + Math.sqrt(d)) / 2 * a
-  x2 = (-b - Math.sqrt(d)) / 2 * a
+  x1 = (-b + root) / 2 * a
+  x2 = (-b - root) / 2 * a
   puts "Уравнение имеет два корня, которые равны #{x1} и #{x2} соответственно"
 else
   puts "Корней нет"
