@@ -5,28 +5,12 @@ b = gets.to_f
 puts "Укажите значение третьей стороны треугольника"
 c = gets.to_f
 
-if a > b && a > c
-  hypotenuse = a
-  first_cathetus = b
-  second_cathetus = c
-elsif b > a && b > c
-  hypotenuse = b
-  first_cathetus = a
-  second_cathetus = c
-elsif c > a && c > b
-  hypotenuse = c
-  first_cathetus = a
-  second_cathetus = b
-end
+a, b, c = [a, b, c].sort
 
-if a == b && b ==c && a == c
-  puts "Это равносторонний треугольник"
-elsif a == b || b == c || a == c
-  puts "Это равнобедренный треугольник"
-end
+right = a**2 + b**2 == c**2
 
-if hypotenuse**2 == first_cathetus**2 + second_cathetus**2
-  puts "Это прямоугольный треугольник"
-else
-  puts "Это не прямоугольный треугольник"
-end
+isosceles = a == b
+
+puts "Это #{right ? "прямоугольный" : "не прямоугольный"} треугольник"
+puts "Треугольник является равнобедренным" if isosceles
+
