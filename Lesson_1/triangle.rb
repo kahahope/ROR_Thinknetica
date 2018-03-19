@@ -1,9 +1,9 @@
 puts "Укажите значение первой стороны треугольника"
-a = gets.chomp.to_f
+a = gets.to_f
 puts "Укажите значение второй стороны треугольника"
-b = gets.chomp.to_f
+b = gets.to_f
 puts "Укажите значение третьей стороны треугольника"
-c = gets.chomp.to_f
+c = gets.to_f
 
 if a > b && a > c
   hypotenuse = a
