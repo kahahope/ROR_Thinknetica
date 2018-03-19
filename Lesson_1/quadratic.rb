@@ -11,10 +11,10 @@ if d == 0
   x = -b / 2 * a
   puts "Уравнение имеет один корень, который равен #{x}"
 elsif
-  root = Math.sqrt(d)
-  x1 = (-b + root) / 2 * a
-  x2 = (-b - root) / 2 * a
+  d > 0
+  x1 = (-b + Math.sqrt(d)) / 2 * a
+  x2 = (-b - Math.sqrt(d)) / 2 * a
   puts "Уравнение имеет два корня, которые равны #{x1} и #{x2} соответственно"
-elsif d < 0
+else
   puts "Корней нет"
 end
