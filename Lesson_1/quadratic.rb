@@ -1,20 +1,20 @@
 puts "Укажите значение a"
-a = gets.chomp.to_f
+a = gets.to_f
 puts "Укажите значение b"
-b = gets.chomp.to_f
+b = gets.to_f
 puts "Укажите значение c"
-c = gets.chomp.to_f
+c = gets.to_f
 
-d = b**2 - 4 * a * c
+d = b**2 - (4 * a * c)
 
 if d == 0
-  x = -b / 2 * a
+  x = -b / (2 * a)
   puts "Уравнение имеет один корень, который равен #{x}"
-elsif
+elsif d > 0
   root = Math.sqrt(d)
-  x1 = (-b + root) / 2 * a
-  x2 = (-b - root) / 2 * a
+  x1 = (-b + root) / (2 * a)
+  x2 = (-b - root) / (2 * a)
   puts "Уравнение имеет два корня, которые равны #{x1} и #{x2} соответственно"
-elsif d < 0
+else
   puts "Корней нет"
 end
