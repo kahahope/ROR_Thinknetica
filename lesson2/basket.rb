@@ -8,12 +8,12 @@ loop do
   break if item == "стоп"
 
   puts "Укажите цену товара"
-  price = gets.chomp.to_f
+  price = gets.to_f
 
   puts "Укажите количество товара"
-  count = gets.chomp.to_f
+  count = gets.to_f
 
-  basket[id] = { name: item, price: price, count: count}
+  basket[id] = [item, price, count]
 
   id +=  1
 end
