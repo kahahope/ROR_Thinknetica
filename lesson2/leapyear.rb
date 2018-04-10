@@ -15,3 +15,4 @@ day_number = day
 
 months.each { |month, day| day_number += day if month < month }
 puts "Порядковый номер даты, начиная с начала года, #{day_number} день"
+
