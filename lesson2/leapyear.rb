@@ -11,8 +11,9 @@ leapyear = year % 4 == 0 && year % 100 != 0 || year % 400 == 0
 
 months[1] = 29 if leapyear
 
-day_number = day
+day_number = 0
+for n in (0..(month -2))
+  day_number += months[n]
+end
 
-months.each { |month, day| day_number += day if month < month }
-puts "Порядковый номер даты, начиная с начала года, #{day_number} день"
-
+puts "Порядковый номер даты, начиная с начала года, #{day_number + day} день"

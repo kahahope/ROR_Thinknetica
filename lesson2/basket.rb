@@ -1,5 +1,5 @@
 basket = {}
-id = 1
+total_sum = 0
 
 loop do
 
@@ -14,18 +14,13 @@ loop do
   puts "Укажите количество товара"
   count = gets.to_f
 
-  basket[id] = ['item', 'price', 'count']
-
-  id +=  1
-
+  basket[item] = {total_price: price, total_count: count}
 end
 
-total_price = []
+basket.each do |item, all_price|
+  sum = all_price[:total_price] * all_price[:total_count]
+  total_sum += sum
+  puts "В корзине товар #{item} в количестве #{all_price[:total_count]} по цене #{all_price[:total_price]}. Cумма покупки составляет #{sum}"
+end
 
-basket.each { |id, val| puts "Сумма за #{id} - #{ val[item]}: #{val[price] * val[count]} }"
-total_price << val[price] * val[count]
-
-total = total_price { |sum, price| sum + price }
-
-puts "Общая сумма заказа составляет #{total}"
-
+puts "Общая сумма заказа составляет #{total_sum}"
